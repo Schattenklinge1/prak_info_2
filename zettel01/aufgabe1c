@@ -1,0 +1,51 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel} 											% Automatische Texte (Inhaltsverzeichnis) auf deutsch
+\usepackage[normalem]{ulem} 											% Neue Befehle fÃÂÃÂ¼r Texthervorhebungen (Unterstreichen...)
+\usepackage{fancyhdr}												% ErmÃÂÃÂ¶glichtglicht freie Gestaltung von Kopf- und FuÃÂÃÂÃÂÃÂzeilen
+\usepackage[pdftex]{graphicx} 											% ErmÃÂÃÂ¶glicht Einbinden von Grafiken
+\usepackage[a4paper,top=2cm,bottom=3cm,left=3cm,right=3cm]{geometry} 						% Hilft beim festlegen von Papierformat und DruckrÃÂÃÂ¤ndern
+\usepackage{setspace} 												% Notwendig fÃÂÃÂ¼r 1,5-fachen Zeilenabstand
+% \usepackage{placeins}												 	% Notwendig, um Floats zu fixieren
+% \usepackage{wrapfig}													% Textumflossene Grafiken
+\usepackage{hyperref}												% Klickbares Inhaltsverzeichnis und Zitate, einfÃÂÃÂÃÂÃÂ¼gen von Links
+%\usepackage{subfiles}													% Einbinden anderer .tex-Dateien, die dann einzeln kompiliert werden kÃÂÃÂ¶nnen
+\usepackage{pdfpages}												% ErmÃÂÃÂ¶glicht das Einbinden von pdfs oder auch nur einzelner Seiten
+\usepackage{epstopdf}												% Einbinden von EPS-Vektorgrafiken
+\usepackage{amsmath}												% Mehr mathematische Zeichen,
+\usepackage{amsfonts}												% Symbole, Funktionen wie das Unterklammern von AusdrÃÂÃÂ¼cken
+\usepackage{amssymb}												% 
+\usepackage{mathtools}												% ÃÂÃÂhnlich wie oben die, zusÃÂÃÂ¤tzliche Inhalte & behebt Fehler
+\usepackage{tabularx}												% Variable Tabellenbreite
+\usepackage{extarrows}												% Symbole wie Pfeile
+\usepackage{ulem}												% VerkÃÂÃÂ¼rzte Befehle fÃÂÃÂ¼r unter-/ÃÂÃÂ¼berkringelte/-strichene Zeichen
+\usepackage{xfrac}												% ErmÃÂÃÂ¶glicht schrÃÂÃÂÃÂÃÂ¤ge Bruchstricht
+\usepackage{ae}	
+
+%opening
+\title{PI2, Zettel01}
+\author{Simon Schmitt, Benjamin Heidelmeier, Martin Lellep}
+
+\parindent 0
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 1c}
+
+Erster Ausdruck:\\
+Sei \(f:String \rightarrow Char, w\mapsto f(w)=w(0)\) und \(l:String \rightarrow Char, w\mapsto l(w)=w.reverse(0)\)
+\[\{w\in mobyWords\ |\ f(w)=='a'\ \&\ l(w)=='e'\}\]\\
+Zweiter Ausdruck:\\
+\[|\{w\in mobyWords | 'e'\in w\ oder 'a'\in w\}|==|mobyWords|\]
+Dritter Ausdruck:\\
+Sei \(size:String\rightarrow Int,w\mapsto size(w)=Anzahl Der Buchstaben\)
+\[|\{w\in mobyWords\ |\ size(w)==15 \}|\]
+Vierter Ausdruck:\\
+Man muss hierzu sagen, dass in dieser mathematischen Interpretation, also das Array als Menge interpretiert, kein Wort mehrfach vorkommen
+kann, da Mengen ungeordnet sind und viel wichtiger keine doppelten Elemente enthalten! Sei also die hier verwendete Mengelehre so angepasst,
+dass Mengen mehrere Elemente enthalten.
+\[|\{w\in mobyWords\ |\ \underbrace{w\in mobyWords\backslash\{w\} | ... | w\in mobyWords\backslash\{w\}}_{9-mal} \}|>0\]
+
+\end{document}
